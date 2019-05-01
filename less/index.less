@@ -4,88 +4,198 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 // CSS Edits
-@color: red;
-@google-font: 'Roboto';
+@color-background: red;
+@google-font: "Roboto";
 @font-regular: 16px;
 @font-small: 12px;
 @font-large: 24px;
 @font-xlarge: 36px;
+@font-xxlarge: 48px;
 
-nav {
-	width: 50%;
-	margin-left: auto;
-	display: flex;
-	justify-content: space-around;
-
-	a {
-		text-decoration: none;
-		color: black;
-	}
+.flex-wrap-content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.main-content {
-	background: @color;
+.main {
+   nav {
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
 
-	h1 {
-		font-size: @font-xlarge;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .main-content {
+    background: @color-background;
+
+    h1 {
+      font-size: @font-xxlarge;
+    }
+
+    h3 {
+      font-size: @font-large;
+      border-bottom: 1px solid grey;
+    }
+  }
+
+  .middle-content {
+    .flex-wrap-content;
+
+    h2 {
+      font-size: @font-xlarge;
+    }
+
+    h3 {
+      font-size: @font-large;
 	}
 
-	h3 {
-		font-size: @font-large;
-		border-bottom: 1px solid grey;
-	}
+	li {
+		border: 1px solid lightgrey;
+	  }
+  }
+
+  table {
+	
+  }
 }
