@@ -140,26 +140,36 @@ body {
 }
 
 // CSS Edits
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+
 @color-background: red;
-@google-font: "Roboto";
+@google-font: 'ZCOOL KuaiLe', cursive;
 @font-regular: 16px;
 @font-small: 12px;
 @font-large: 24px;
 @font-xlarge: 36px;
 @font-xxlarge: 48px;
 @border-line: 1px solid lightgrey;
+@bold: bold;
 
 .flex-wrap-content {
   display: flex;
   flex-wrap: wrap;
 }
 
+.text-center {
+	text-align: center;
+}
+
 .main {
+  font-family: 'Arial';
+
    nav {
     width: 50%;
     margin-left: auto;
     display: flex;
-    justify-content: space-around;
+	justify-content: space-around;
+	font-family: @google-font;
 
     a {
       text-decoration: none;
@@ -198,6 +208,15 @@ body {
 
   table {
 	border-top: @border-line;
+	.text-center;
+
+	.years {
+		font-weight: @bold;
+	}
+
+	th {
+		font-weight: @bold;
+	}
 
 	tr {
 		border-top: @border-line;
@@ -212,5 +231,18 @@ body {
 	  height: 50px;
 	  width: 50px;
 	  color: black;
+  }
+
+  .contact {
+	  .text-center;
+
+	  h3 {
+		  font-size: @font-large;
+	  }
+  }
+
+  footer {
+	  font-family: @google-font;
+	  .text-center;
   }
 }
