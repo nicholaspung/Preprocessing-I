@@ -266,11 +266,21 @@ body {
     .flex;
 	width: 90%;
 	margin: auto;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	
+	@media screen and (min-width: @small-screen) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
 
     div {
       width: @width;
 	  .margin;
+
+	  @media screen and (min-width: @small-screen) {
+	margin-left: 2.5%;
+	margin-right: 2.5%;		
+	}
     }
 
     h2 {
@@ -303,6 +313,11 @@ body {
 		border-top: @border-line;
 		.text-center;
 		width: @width;
+
+		@media screen and (min-width: @small-screen) {
+			width: 75%;
+			margin: auto;
+		}
 	
 		.years {
 		  font-weight: @bold;
