@@ -155,6 +155,8 @@ body {
 @small-screen: 500px;
 @regular-margin: 20px;
 @line-height: 1.6;
+@table-width: 75%;
+@middle-margin: 2.5%;
 
 .flex {
   display: flex;
@@ -169,7 +171,7 @@ body {
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .margin {
@@ -179,7 +181,7 @@ body {
 
 .main {
   font-family: "Arial";
-  width: 95%;
+  width: @width*0.95;
   margin: auto;
 
   p {
@@ -203,7 +205,7 @@ body {
     }
 
     @media screen and (min-width: @small-screen) {
-      width: 50%;
+      width: @width/2;
       margin-left: auto;
       .flex;
       justify-content: space-around;
@@ -219,11 +221,11 @@ body {
     padding: @regular-margin*2;
     .flex;
     flex-wrap: wrap;
-	justify-content: center;
-	
-	@media screen and (min-width: @small-screen) {
-		.block;
-	}
+    justify-content: center;
+
+    @media screen and (min-width: @small-screen) {
+      .block;
+    }
 
     div {
       .margin;
@@ -236,11 +238,11 @@ body {
 
     h1 {
       font-size: @font-xxlarge;
-	  .text-center;
-	  
-	  @media screen and (min-width: @small-screen) {
-		.text-left;	
-	}
+      .text-center;
+
+      @media screen and (min-width: @small-screen) {
+        .text-left;
+      }
     }
 
     h3 {
@@ -248,94 +250,94 @@ body {
       font-size: @font-large;
       border-bottom: @border-line;
       .margin;
-	  .text-center;
-	  
-	  @media screen and (min-width: @small-screen) {
-		.text-left;	
-	}
+      .text-center;
+
+      @media screen and (min-width: @small-screen) {
+        .text-left;
+      }
     }
 
     button {
       .margin;
-      padding: 10px 20px;
-      border-radius: 5px;
-	}
+      padding: @regular-margin/2 @regular-margin;
+	  border-radius: 5px;
+	  font-size: @font-regular;
+    }
   }
 
   .middle-content {
     .flex;
-	width: 90%;
-	margin: auto;
-	flex-wrap: wrap;
-	
-	@media screen and (min-width: @small-screen) {
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
+    width: @width*0.9;
+    margin: auto;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: @small-screen) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
 
     div {
       width: @width;
-	  .margin;
+      .margin;
 
-	  @media screen and (min-width: @small-screen) {
-	margin-left: 2.5%;
-	margin-right: 2.5%;		
-	}
+      @media screen and (min-width: @small-screen) {
+        margin-left: @middle-margin;
+        margin-right: @middle-margin;
+      }
     }
 
     h2 {
-	  font-size: @font-xlarge;
-	  .margin;
+      font-size: @font-xlarge;
+      .margin;
     }
 
     h3 {
-		.margin;
+      .margin;
       font-size: @font-large;
     }
 
     li {
-	  border: @border-line;
-	  line-height: @line-height;
+      border: @border-line;
+      line-height: @line-height;
     }
   }
 
-
   .table-content {
-	.margin;
-	.text-center;
+    .margin;
+    .text-center;
 
-	h3 {
-		.margin;
-		font-size: @font-large;
-	}
+    h3 {
+      .margin;
+      font-size: @font-large;
+    }
 
-	table {
-		border-top: @border-line;
-		.text-center;
-		width: @width;
+    table {
+      border-top: @border-line;
+      .text-center;
+      width: @width;
 
-		@media screen and (min-width: @small-screen) {
-			width: 75%;
-			margin: auto;
-		}
-	
-		.years {
-		  font-weight: @bold;
-		}
-	
-		th {
-		  font-weight: @bold;
-		}
-	
-		tr {
-		  border-top: @border-line;
-		  line-height: @line-height;
-		}
-	
-		.table-color {
-		  background: @color-background;
-		}
-	  }
+      @media screen and (min-width: @small-screen) {
+        width: @table-width;
+        margin: auto;
+      }
+
+      .years {
+        font-weight: @bold;
+      }
+
+      th {
+        font-weight: @bold;
+      }
+
+      tr {
+        border-top: @border-line;
+        line-height: @line-height;
+      }
+
+      .table-color {
+        background: @color-background;
+      }
+    }
   }
 
   .contact {
@@ -344,13 +346,13 @@ body {
 
     h3 {
       font-size: @font-large;
-	}
-	
-	svg {
-		height: 50px;
-		width: 50px;
-		color: black;
-	  }
+    }
+
+    svg {
+      height: 50px;
+      width: 50px;
+      color: black;
+    }
   }
 
   footer {
@@ -358,6 +360,6 @@ body {
     .text-center;
     background: @color-background;
     margin-top: @regular-margin;
-    padding: 20px 0 40px 0;
+    padding: @regular-margin 0 @regular-margin*2 0;
   }
 }
