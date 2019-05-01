@@ -154,6 +154,7 @@ body {
 @width: 100%;
 @small-screen: 500px;
 @regular-margin: 20px;
+@line-height: 1.6;
 
 .flex {
   display: flex;
@@ -167,6 +168,10 @@ body {
   text-align: center;
 }
 
+.text-left {
+	text-align: left;
+}
+
 .margin {
   margin-top: @regular-margin;
   margin-bottom: @regular-margin;
@@ -178,7 +183,7 @@ body {
   margin: auto;
 
   p {
-    line-height: 1.6;
+    line-height: @line-height;
   }
 
   @media screen and (min-width: @small-screen) {
@@ -214,10 +219,13 @@ body {
     padding: @regular-margin*2;
     .flex;
     flex-wrap: wrap;
-    justify-content: center;
+	justify-content: center;
+	
+	@media screen and (min-width: @small-screen) {
+		.block;
+	}
 
     div {
-      border: @border-line;
       .margin;
     }
 
@@ -228,7 +236,11 @@ body {
 
     h1 {
       font-size: @font-xxlarge;
-      .text-center;
+	  .text-center;
+	  
+	  @media screen and (min-width: @small-screen) {
+		.text-left;	
+	}
     }
 
     h3 {
@@ -236,66 +248,79 @@ body {
       font-size: @font-large;
       border-bottom: @border-line;
       .margin;
-      .text-center;
+	  .text-center;
+	  
+	  @media screen and (min-width: @small-screen) {
+		.text-left;	
+	}
     }
 
     button {
       .margin;
       padding: 10px 20px;
       border-radius: 5px;
-    }
+	}
   }
 
   .middle-content {
     .flex;
-    width: @width;
-    .flex;
+	width: 90%;
+	margin: auto;
     flex-wrap: wrap;
 
     div {
       width: @width;
-      .margin;
+	  .margin;
     }
 
     h2 {
-      font-size: @font-xlarge;
+	  font-size: @font-xlarge;
+	  .margin;
     }
 
     h3 {
+		.margin;
       font-size: @font-large;
     }
 
     li {
-      border: @border-line;
+	  border: @border-line;
+	  line-height: @line-height;
     }
   }
 
-  table {
-    border-top: @border-line;
-    .text-center;
-    width: @width;
 
-    .years {
-      font-weight: @bold;
-    }
+  .table-content {
+	.margin;
+	.text-center;
 
-    th {
-      font-weight: @bold;
-    }
+	h3 {
+		.margin;
+		font-size: @font-large;
+	}
 
-    tr {
-      border-top: @border-line;
-    }
-
-    .table-color {
-      background: @color-background;
-    }
-  }
-
-  svg {
-    height: 50px;
-    width: 50px;
-    color: black;
+	table {
+		border-top: @border-line;
+		.text-center;
+		width: @width;
+	
+		.years {
+		  font-weight: @bold;
+		}
+	
+		th {
+		  font-weight: @bold;
+		}
+	
+		tr {
+		  border-top: @border-line;
+		  line-height: @line-height;
+		}
+	
+		.table-color {
+		  background: @color-background;
+		}
+	  }
   }
 
   .contact {
@@ -304,7 +329,13 @@ body {
 
     h3 {
       font-size: @font-large;
-    }
+	}
+	
+	svg {
+		height: 50px;
+		width: 50px;
+		color: black;
+	  }
   }
 
   footer {

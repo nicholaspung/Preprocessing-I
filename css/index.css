@@ -149,6 +149,9 @@ body {
 .text-center {
   text-align: center;
 }
+.text-left {
+  text-align: left;
+}
 .margin {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -192,8 +195,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media screen and (min-width: 500px) {
+  .main .main-content {
+    display: block;
+  }
+}
 .main .main-content div {
-  border: 1px solid lightgrey;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -205,6 +212,11 @@ body {
   font-size: 48px;
   text-align: center;
 }
+@media screen and (min-width: 500px) {
+  .main .main-content h1 {
+    text-align: left;
+  }
+}
 .main .main-content h3 {
   width: 100%;
   font-size: 24px;
@@ -213,6 +225,11 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
+@media screen and (min-width: 500px) {
+  .main .main-content h3 {
+    text-align: left;
+  }
+}
 .main .main-content button {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -220,8 +237,9 @@ body {
   border-radius: 5px;
 }
 .main .middle-content {
-  width: 100%;
   display: flex;
+  width: 90%;
+  margin: auto;
   flex-wrap: wrap;
 }
 .main .middle-content div {
@@ -231,34 +249,45 @@ body {
 }
 .main .middle-content h2 {
   font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .main .middle-content h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 24px;
 }
 .main .middle-content li {
   border: 1px solid lightgrey;
+  line-height: 1.6;
 }
-.main table {
+.main .table-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.main .table-content h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.main .table-content table {
   border-top: 1px solid lightgrey;
   text-align: center;
   width: 100%;
 }
-.main table .years {
+.main .table-content table .years {
   font-weight: bold;
 }
-.main table th {
+.main .table-content table th {
   font-weight: bold;
 }
-.main table tr {
+.main .table-content table tr {
   border-top: 1px solid lightgrey;
+  line-height: 1.6;
 }
-.main table .table-color {
+.main .table-content table .table-color {
   background: red;
-}
-.main svg {
-  height: 50px;
-  width: 50px;
-  color: black;
 }
 .main .contact {
   margin-top: 20px;
@@ -267,6 +296,11 @@ body {
 }
 .main .contact h3 {
   font-size: 24px;
+}
+.main .contact svg {
+  height: 50px;
+  width: 50px;
+  color: black;
 }
 .main footer {
   font-family: "ZCOOL KuaiLe", cursive;
