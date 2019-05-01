@@ -140,29 +140,47 @@ body {
   font-weight: 400;
   src: local('ZCOOL KuaiLe Regular'), local('ZCOOLKuaiLe-Regular'), url(https://fonts.gstatic.com/s/zcoolkuaile/v4/tssqApdaRQokwFjFJjvM6h2moYb3.ttf) format('truetype');
 }
-.flex-wrap-content {
+.flex {
   display: flex;
-  flex-wrap: wrap;
+}
+.block {
+  display: block;
 }
 .text-center {
   text-align: center;
 }
 .main {
-  font-family: 'Arial';
+  font-family: "Arial";
+  min-width: 500px;
 }
 .main nav {
-  width: 50%;
-  margin-left: auto;
-  display: flex;
-  justify-content: space-around;
-  font-family: 'ZCOOL KuaiLe', cursive;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: "ZCOOL KuaiLe", cursive;
 }
 .main nav a {
   text-decoration: none;
   color: black;
+  display: block;
+}
+@media screen and (min-width: 500px) {
+  .main nav {
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .main nav a {
+    display: inline-block;
+  }
 }
 .main .main-content {
   background: red;
+}
+.main .main-content img {
+  height: 300px;
+  width: 300px;
 }
 .main .main-content h1 {
   font-size: 48px;
@@ -173,7 +191,7 @@ body {
 }
 .main .middle-content {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 .main .middle-content h2 {
   font-size: 36px;
@@ -187,6 +205,7 @@ body {
 .main table {
   border-top: 1px solid lightgrey;
   text-align: center;
+  width: 100%;
 }
 .main table .years {
   font-weight: bold;
@@ -200,7 +219,7 @@ body {
 .main table .table-color {
   background: red;
 }
-.main .svg-inline--fa {
+.main svg {
   height: 50px;
   width: 50px;
   color: black;
@@ -212,6 +231,6 @@ body {
   font-size: 24px;
 }
 .main footer {
-  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: "ZCOOL KuaiLe", cursive;
   text-align: center;
 }

@@ -140,10 +140,10 @@ body {
 }
 
 // CSS Edits
-@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
 
 @color-background: red;
-@google-font: 'ZCOOL KuaiLe', cursive;
+@google-font: "ZCOOL KuaiLe", cursive;
 @font-regular: 16px;
 @font-small: 12px;
 @font-large: 24px;
@@ -151,34 +151,59 @@ body {
 @font-xxlarge: 48px;
 @border-line: 1px solid lightgrey;
 @bold: bold;
+@width: 100%;
+@small-screen: 500px;
 
-.flex-wrap-content {
+.flex {
   display: flex;
-  flex-wrap: wrap;
+}
+
+.block {
+  display: block;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .main {
-  font-family: 'Arial';
+  font-family: "Arial";
+  min-width: @small-screen;
 
-   nav {
-    width: 50%;
-    margin-left: auto;
-    display: flex;
-	justify-content: space-around;
-	font-family: @google-font;
+  @media screen and (min-width: @small-screen) {
+  }
+
+  nav {
+    width: @width;
+    .block;
+    .text-center;
+    font-family: @google-font;
 
     a {
       text-decoration: none;
       color: black;
+      .block;
+    }
+
+    @media screen and (min-width: @small-screen) {
+      width: 50%;
+      margin-left: auto;
+      .flex;
+      justify-content: space-around;
+
+      a {
+        display: inline-block;
+      }
     }
   }
 
   .main-content {
     background: @color-background;
+
+    img {
+      height: 300px;
+      width: 300px;
+    }
 
     h1 {
       font-size: @font-xxlarge;
@@ -191,7 +216,8 @@ body {
   }
 
   .middle-content {
-    .flex-wrap-content;
+    .flex;
+    width: @width;
 
     h2 {
       font-size: @font-xlarge;
@@ -199,50 +225,51 @@ body {
 
     h3 {
       font-size: @font-large;
-	}
+    }
 
-	li {
-		border: @border-line;
-	  }
+    li {
+      border: @border-line;
+    }
   }
 
   table {
-	border-top: @border-line;
-	.text-center;
+    border-top: @border-line;
+    .text-center;
+    width: @width;
 
-	.years {
-		font-weight: @bold;
-	}
+    .years {
+      font-weight: @bold;
+    }
 
-	th {
-		font-weight: @bold;
-	}
+    th {
+      font-weight: @bold;
+    }
 
-	tr {
-		border-top: @border-line;
-	}
+    tr {
+      border-top: @border-line;
+    }
 
-	.table-color {
-		background: @color-background;
-	}
+    .table-color {
+      background: @color-background;
+    }
   }
 
-  .svg-inline--fa {
-	  height: 50px;
-	  width: 50px;
-	  color: black;
+  svg {
+    height: 50px;
+    width: 50px;
+    color: black;
   }
 
   .contact {
-	  .text-center;
+    .text-center;
 
-	  h3 {
-		  font-size: @font-large;
-	  }
+    h3 {
+      font-size: @font-large;
+    }
   }
 
   footer {
-	  font-family: @google-font;
-	  .text-center;
+    font-family: @google-font;
+    .text-center;
   }
 }
