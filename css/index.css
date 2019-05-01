@@ -188,6 +188,14 @@ body {
 .main .main-content {
   background: red;
   padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .main-content div {
+  border: 1px solid lightgrey;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .main .main-content img {
   height: 300px;
@@ -195,17 +203,19 @@ body {
 }
 .main .main-content h1 {
   font-size: 48px;
+  text-align: center;
 }
 .main .main-content h3 {
+  width: 100%;
   font-size: 24px;
   border-bottom: 1px solid lightgrey;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .main .main-content button {
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 20px;
   padding: 10px 20px;
   border-radius: 5px;
 }

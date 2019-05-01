@@ -168,8 +168,8 @@ body {
 }
 
 .margin {
-	margin-top: @regular-margin;
-	margin-bottom: @regular-margin;
+  margin-top: @regular-margin;
+  margin-bottom: @regular-margin;
 }
 
 .main {
@@ -178,24 +178,23 @@ body {
   margin: auto;
 
   p {
-	  line-height: 1.6;
+    line-height: 1.6;
   }
 
   @media screen and (min-width: @small-screen) {
-	  
   }
 
   nav {
     width: @width;
     .block;
     .text-center;
-	font-family: @google-font;
+    font-family: @google-font;
 
     a {
       text-decoration: none;
       color: black;
-	  .block;
-	  .margin;
+      .block;
+      .margin;
     }
 
     @media screen and (min-width: @small-screen) {
@@ -209,10 +208,18 @@ body {
       }
     }
   }
-  
+
   .main-content {
-	background: @color-background;
-	padding: @regular-margin*2;
+    background: @color-background;
+    padding: @regular-margin*2;
+    .flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+      border: @border-line;
+      .margin;
+    }
 
     img {
       height: 300px;
@@ -221,32 +228,34 @@ body {
 
     h1 {
       font-size: @font-xxlarge;
+      .text-center;
     }
 
     h3 {
+      width: @width;
       font-size: @font-large;
-	  border-bottom: @border-line;
-	  .margin;
-	}
-	
-	button {
-		.margin;
-		margin-left: @regular-margin;
-		padding: 10px 20px;
-		border-radius: 5px;
-	}
+      border-bottom: @border-line;
+      .margin;
+      .text-center;
+    }
+
+    button {
+      .margin;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
   }
 
   .middle-content {
     .flex;
-	width: @width;
-	.flex;
-	flex-wrap: wrap;
+    width: @width;
+    .flex;
+    flex-wrap: wrap;
 
-	div {
-		width: @width;
-		.margin;
-	}
+    div {
+      width: @width;
+      .margin;
+    }
 
     h2 {
       font-size: @font-xlarge;
@@ -290,19 +299,19 @@ body {
   }
 
   .contact {
-	.margin;
+    .margin;
     .text-center;
 
     h3 {
       font-size: @font-large;
-	}
+    }
   }
 
   footer {
     font-family: @google-font;
-	.text-center;
-	background: @color-background;
-	margin-top: @regular-margin;
-	padding: 20px 0 40px 0;
+    .text-center;
+    background: @color-background;
+    margin-top: @regular-margin;
+    padding: 20px 0 40px 0;
   }
 }
