@@ -147,6 +147,7 @@ body {
 @font-large: 24px;
 @font-xlarge: 36px;
 @font-xxlarge: 48px;
+@border-line: 1px solid lightgrey;
 
 .flex-wrap-content {
   display: flex;
@@ -175,7 +176,7 @@ body {
 
     h3 {
       font-size: @font-large;
-      border-bottom: 1px solid grey;
+      border-bottom: @border-line;
     }
   }
 
@@ -191,11 +192,25 @@ body {
 	}
 
 	li {
-		border: 1px solid lightgrey;
+		border: @border-line;
 	  }
   }
 
   table {
-	
+	border-top: @border-line;
+
+	tr {
+		border-top: @border-line;
+	}
+
+	.table-color {
+		background: @color-background;
+	}
+  }
+
+  .svg-inline--fa {
+	  height: 50px;
+	  width: 50px;
+	  color: black;
   }
 }

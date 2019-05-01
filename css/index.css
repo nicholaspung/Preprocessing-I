@@ -156,7 +156,7 @@ body {
 }
 .main .main-content h3 {
   font-size: 24px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
 }
 .main .middle-content {
   display: flex;
@@ -170,4 +170,18 @@ body {
 }
 .main .middle-content li {
   border: 1px solid lightgrey;
+}
+.main table {
+  border-top: 1px solid lightgrey;
+}
+.main table tr {
+  border-top: 1px solid lightgrey;
+}
+.main table .table-color {
+  background: red;
+}
+.main .svg-inline--fa {
+  height: 50px;
+  width: 50px;
+  color: black;
 }
