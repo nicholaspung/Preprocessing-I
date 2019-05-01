@@ -58,14 +58,34 @@ html, body {
 }
 
 // CSS Edits
+@color: red;
+@google-font: 'Roboto';
+@font-regular: 16px;
+@font-small: 12px;
+@font-large: 24px;
+@font-xlarge: 36px;
+
 nav {
 	width: 50%;
 	margin-left: auto;
 	display: flex;
 	justify-content: space-around;
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
 }
 
-nav a {
-	text-decoration: none;
-	color: black;
+.main-content {
+	background: @color;
+
+	h1 {
+		font-size: @font-xlarge;
+	}
+
+	h3 {
+		font-size: @font-large;
+		border-bottom: 1px solid grey;
+	}
 }

@@ -144,3 +144,13 @@ nav a {
   text-decoration: none;
   color: black;
 }
+.main-content {
+  background: red;
+}
+.main-content h1 {
+  font-size: 36px;
+}
+.main-content h3 {
+  font-size: 24px;
+  border-bottom: 1px solid grey;
+}
