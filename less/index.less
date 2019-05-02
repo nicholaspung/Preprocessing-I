@@ -4,56 +4,364 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+// CSS Edits
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
+
+@color-background: red;
+@google-font: "ZCOOL KuaiLe", cursive;
+@font-regular: 1em;
+@font-small: 0.75em;
+@font-large: 1.5em;
+@font-xlarge: 2.25em;
+@font-xxlarge: 3em;
+@border-line: 1px solid lightgrey;
+@bold: bold;
+@width: 100%;
+@small-screen: 500px;
+@regular-margin: 4%;
+@line-height: 1.6;
+@table-width: 75%;
+@middle-margin: 2.5%;
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.margin {
+  margin-top: @regular-margin;
+  margin-bottom: @regular-margin;
+}
+
+.main {
+	// font-size: 62.5%;
+  font-family: "Arial";
+  width: @width*0.95;
+  margin: auto;
+  font-size: 16px;
+
+  p {
+    line-height: @line-height;
+  }
+
+  @media screen and (min-width: @small-screen) {
+  }
+
+  nav {
+    width: @width;
+    .block;
+    .text-center;
+    font-family: @google-font;
+
+    a {
+      text-decoration: none;
+      color: black;
+      .block;
+      .margin;
+    }
+
+    @media screen and (min-width: @small-screen) {
+      width: @width/2;
+      margin-left: auto;
+      .flex;
+      justify-content: space-around;
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  .main-content {
+    background: @color-background;
+    padding: @regular-margin*2;
+    .flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: @small-screen) {
+      .block;
+    }
+
+    div {
+      .margin;
+    }
+
+    img {
+      height: 300px;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: @font-xxlarge;
+      .text-center;
+
+      @media screen and (min-width: @small-screen) {
+        .text-left;
+      }
+    }
+
+    h3 {
+      width: @width;
+      font-size: @font-large;
+      border-bottom: @border-line;
+      .margin;
+      .text-center;
+
+      @media screen and (min-width: @small-screen) {
+        .text-left;
+      }
+    }
+
+    button {
+      .margin;
+      padding: @regular-margin/2 @regular-margin;
+	  border-radius: 5px;
+	  font-size: @font-regular;
+    }
+  }
+
+  .middle-content {
+    .flex;
+    width: @width*0.9;
+    margin: auto;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: @small-screen) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    div {
+      width: @width;
+      .margin;
+
+      @media screen and (min-width: @small-screen) {
+        margin-left: @middle-margin;
+        margin-right: @middle-margin;
+      }
+    }
+
+    h2 {
+      font-size: @font-xlarge;
+      .margin;
+    }
+
+    h3 {
+      .margin;
+      font-size: @font-large;
+    }
+
+    li {
+      border: @border-line;
+      line-height: @line-height;
+    }
+  }
+
+  .table-content {
+    .margin;
+    .text-center;
+
+    h3 {
+      .margin;
+      font-size: @font-large;
+    }
+
+    table {
+      border-top: @border-line;
+      .text-center;
+      width: @width;
+
+      @media screen and (min-width: @small-screen) {
+        width: @table-width;
+        margin: auto;
+      }
+
+      .years {
+        font-weight: @bold;
+      }
+
+      th {
+        font-weight: @bold;
+      }
+
+      tr {
+        border-top: @border-line;
+        line-height: @line-height;
+      }
+
+      .table-color {
+        background: @color-background;
+      }
+    }
+  }
+
+  .contact {
+    .margin;
+    .text-center;
+
+    h3 {
+      font-size: @font-large;
+    }
+
+    svg {
+      height: 50px;
+      width: 50px;
+      color: black;
+    }
+  }
+
+  footer {
+    font-family: @google-font;
+    .text-center;
+    background: @color-background;
+    margin-top: @regular-margin;
+    padding: @regular-margin 0 @regular-margin*2 0;
+  }
+}
